@@ -4,8 +4,8 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 var gameState = "START"
-var waterScore = 15;
-var woodScore = 0//100;
+var waterScore = 0;
+var woodScore = 0;
 var lifeScore = 3;
 var timer = 0;
 
@@ -606,6 +606,7 @@ function gameLevel2(){
 		player.scale = 0.4;
 		player.changeAnimation("moveRight");
 		player.x = 200;
+		player.y = height/2;
 		chatBubble.visible = false;
 		woods.velocityX = -(woodScore+5)/2;
 
