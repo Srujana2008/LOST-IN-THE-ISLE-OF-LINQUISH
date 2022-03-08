@@ -606,10 +606,9 @@ function gameLevel2(){
 		player.scale = 0.4;
 		player.changeAnimation("moveRight");
 		player.x = 200;
-		player.y = height/2;
+		//player.y = height/2;
 		chatBubble.visible = false;
 		woods.velocityX = -(woodScore+5)/2;
-
 		player.depth = text3.depth+100;
 
 		spawnTrees();
@@ -637,7 +636,7 @@ function gameLevel2(){
 			jumpsound.play();
 			jumpsound.setVolume(0.3)
 		}  
-		player.velocityY = player.velocityY + 0.5;
+		player.velocityY = player.velocityY + 0.8;
 
 		if(mousePressedOver(howToPlay)){
 			howToPlaypopup.changeAnimation("pop3");
@@ -674,6 +673,7 @@ function gameLevel2WinLose(){
 
 		if(mousePressedOver(resetBtn)){
 			player.visible = true;
+			player.y = height/2;
 			gameState = "Level-2"
 			life.scale = 0.32;
 			resetBtn.visible = false;
